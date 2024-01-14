@@ -21,8 +21,8 @@ uri = f"mysql+pymysql://{user}:{password}@{host}/{database}"
 engine = sqlalchemy.create_engine(uri)
 
 # Test SQL command
-# df = pd.read_sql("show tables", engine)
-# print(df.head(3))
+df = pd.read_sql("show tables", engine)
+print(df.head(3))
 
 tables = {
     "products": """
